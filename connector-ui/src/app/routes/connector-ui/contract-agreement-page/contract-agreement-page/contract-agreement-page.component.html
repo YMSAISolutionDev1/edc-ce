@@ -27,15 +27,15 @@
         <mat-button-toggle
           value="ONGOING"
           (change)="onTerminationFilterChange()"
-          >Active Contracts</mat-button-toggle
+          >{{ 'contract_agreement_page.active_contracts' | translate }}</mat-button-toggle
         >
         <mat-button-toggle
           value="TERMINATED"
           (change)="onTerminationFilterChange()"
-          >Terminated Contracts</mat-button-toggle
+          >{{ 'contract_agreement_page.terminated_contracts' | translate }}</mat-button-toggle
         >
         <mat-button-toggle value="all" (change)="onTerminationFilterChange()"
-          >All Contracts</mat-button-toggle
+          >{{ 'contract_agreement_page.all_contracts' | translate }}</mat-button-toggle
         >
       </mat-button-toggle-group>
     </div>

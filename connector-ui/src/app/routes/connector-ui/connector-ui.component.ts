@@ -27,7 +27,7 @@ export class ConnectorUiComponent implements OnInit {
   navItemGroups: NavItemGroup[] = [];
 
   selectedLanguage = new LocalStoredValue<string>(
-    'en',
+    'ko',
     'selectedLanguage',
     isLanguageSupported,
   );
@@ -41,7 +41,7 @@ export class ConnectorUiComponent implements OnInit {
     private translateService: TranslateService,
   ) {
     this.navItemGroups = this.navItemsBuilder.buildNavItemGroups();
-    this.translateService.setDefaultLang('en');
+    this.translateService.setDefaultLang('ko');
     this.translateService.use(this.selectedLanguage.value);
   }
 

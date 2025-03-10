@@ -13,7 +13,7 @@ export class NavItemsBuilder {
   private navItemGroups: NavItemGroup[] = [
     {
       items: [
-        {path: 'dashboard', icon: 'data_usage', title: 'Dashboard'},
+        {path: 'dashboard', icon: 'data_usage', title: 'dashboard_page.title'},
         {
           path: 'catalog-browser',
           icon: 'sim_card',

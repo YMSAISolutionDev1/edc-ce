@@ -13,7 +13,7 @@ import {LocalStoredValue} from '../../../core/utils/local-stored-value';
 })
 export class LanguageSelectorComponent implements OnInit {
   selectedLanguage = new LocalStoredValue<string>(
-    'en',
+    'ko',
     'selectedLanguage',
     isLanguageSupported,
   );

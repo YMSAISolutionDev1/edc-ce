@@ -4,6 +4,7 @@ export interface AvailableLanguage {
 }
 
 export const supportedLanguages: AvailableLanguage[] = [
+  {code: 'ko', name: 'Korean'},
   {code: 'en', name: 'English'},
   {code: 'de', name: 'Deutsch'},
 ];

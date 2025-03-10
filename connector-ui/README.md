@@ -14,7 +14,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/sovity/edc-ui">
-    <img src="src/assets/images/sovity_logo.svg" alt="Logo" width="300">
+    <img src="src/assets/images/ymatics_logo.svg" alt="Logo" width="300">
   </a>
 
 <h3 align="center">sovity EDC UI</h3>
