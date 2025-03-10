@@ -247,7 +247,7 @@ export class ConnectorInfoPropertyGridGroupBuilder {
     uiCommitDetails: Fetched<string>,
   ): PropertyGridGroup {
     return {
-      groupLabel: 'Version Information',
+      groupLabel: this.translateService.instant('general.version_information'),
       properties: [
         ...this.getBackendVersionFields(lastCommitInfo),
         ...this.getUiVersionField(uiBuildDate, uiCommitDetails),

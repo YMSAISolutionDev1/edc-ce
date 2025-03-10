@@ -429,6 +429,7 @@
   "general.updated": "마지막 업데이트",
   "general.value": "값",
   "general.vault_secret": "저장소 비밀 이름",
+  "general.version_information": "버전 정보",
   "general.warn": "경고",
   "logout_page.title": "로그아웃",
   "notification.asset": "자산이 성공적으로 저장되었습니다.",

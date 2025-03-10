@@ -429,6 +429,7 @@
   "general.updated": "Last updated",
   "general.value": "Value",
   "general.vault_secret": "Vault Secret Name",
+  "general.version_information": "Version Information",
   "general.warn": "Warn",
   "logout_page.title": "Logout",
   "notification.asset": "Successfully saved asset.",
