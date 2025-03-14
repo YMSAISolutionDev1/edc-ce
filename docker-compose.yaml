@@ -15,18 +15,20 @@ services:
       NGINX_ACCESS_LOG: off
 
   edc:
-    image: ${EDC_IMAGE}
+    build:
+      context: .
+      dockerfile: DockerFile.edc
     depends_on:
       postgresql:
         condition: service_healthy
     environment:
       MY_EDC_PARTICIPANT_ID: "my-edc"
       MY_EDC_TITLE: "EDC Connector"
-      MY_EDC_DESCRIPTION: "sovity Community Edition EDC Connector"
-      MY_EDC_CURATOR_URL: "https://example.com"
-      MY_EDC_CURATOR_NAME: "Example GmbH"
-      MY_EDC_MAINTAINER_URL: "https://sovity.de"
-      MY_EDC_MAINTAINER_NAME: "sovity GmbH"
+      MY_EDC_DESCRIPTION: "Ymatics Community Edition EDC Connector"
+      MY_EDC_CURATOR_URL: "https://ymatics.com"
+      MY_EDC_CURATOR_NAME: "Ymatics AG"
+      MY_EDC_MAINTAINER_URL: "https://ymatics.com"
+      MY_EDC_MAINTAINER_NAME: "Ymatics AG"
 
       MY_EDC_FQDN: "edc"
       EDC_API_AUTH_KEY: ApiKeyDefaultValue
@@ -42,6 +44,7 @@ services:
       EDC_WEB_REST_CORS_HEADERS: 'origin,content-type,accept,authorization,X-Api-Key'
       EDC_WEB_REST_CORS_ORIGINS: '*'
       EDC_AGENT_IDENTITY_KEY: 'client_id' # required for Mock IAM to work
+      JAVA_TOOL_OPTIONS: '-Djavax.net.debug=ssl:handshake'
 
     ports:
       - '11001:11001'
@@ -63,18 +66,20 @@ services:
       NGINX_ACCESS_LOG: off
 
   edc2:
-    image: ${EDC_IMAGE}
+    build:
+      context: .
+      dockerfile: DockerFile.edc
     depends_on:
       postgresql2:
         condition: service_healthy
     environment:
       MY_EDC_PARTICIPANT_ID: "my-edc2"
       MY_EDC_TITLE: "EDC Connector 2"
-      MY_EDC_DESCRIPTION: "sovity Community Edition EDC Connector"
-      MY_EDC_CURATOR_URL: "https://example.com"
-      MY_EDC_CURATOR_NAME: "Example GmbH"
-      MY_EDC_MAINTAINER_URL: "https://sovity.de"
-      MY_EDC_MAINTAINER_NAME: "sovity GmbH"
+      MY_EDC_DESCRIPTION: "Ymatics Community Edition EDC Connector"
+      MY_EDC_CURATOR_URL: "https://ymatics.com"
+      MY_EDC_CURATOR_NAME: "Ymatics AG"
+      MY_EDC_MAINTAINER_URL: "https://ymatics.com"
+      MY_EDC_MAINTAINER_NAME: "Ymatics AG"
 
       MY_EDC_FQDN: "edc2"
       EDC_API_AUTH_KEY: ApiKeyDefaultValue
@@ -90,6 +95,7 @@ services:
       EDC_WEB_REST_CORS_HEADERS: 'origin,content-type,accept,authorization,X-Api-Key'
       EDC_WEB_REST_CORS_ORIGINS: '*'
       EDC_AGENT_IDENTITY_KEY: 'client_id' # required for Mock IAM to work
+      JAVA_TOOL_OPTIONS: '-Djavax.net.debug=ssl:handshake'
 
     ports:
       - '22001:11001'

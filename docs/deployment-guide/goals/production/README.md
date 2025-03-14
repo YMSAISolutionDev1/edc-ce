@@ -113,12 +113,12 @@ MY_EDC_PARTICIPANT_ID: "MDSL1234XX.C1234XX"
 MY_EDC_TITLE: "EDC Connector"
 
 # Connector Description Text
-MY_EDC_DESCRIPTION: "sovity Community Edition EDC Connector"
+MY_EDC_DESCRIPTION: "Ymatics Community Edition EDC Connector"
 
 # Connector Curator
 # The company using the EDC Connector, configuring data offers, etc.
-MY_EDC_CURATOR_URL: "https://example.com"
-MY_EDC_CURATOR_NAME: "Example GmbH"
+MY_EDC_CURATOR_URL: "https://ymatics.com"
+MY_EDC_CURATOR_NAME: "Ymatics AG"
 
 # Database Connection
 MY_EDC_JDBC_URL: jdbc:postgresql://postgresql:5432/edc
@@ -131,8 +131,8 @@ EDC_API_AUTH_KEY: ApiKeyDefaultValue
 
 # Connector Maintainer
 # The company hosting the EDC Connector
-MY_EDC_MAINTAINER_URL: "https://sovity.de"
-MY_EDC_MAINTAINER_NAME: "sovity GmbH"
+MY_EDC_MAINTAINER_URL: "https://ymatics.com"
+MY_EDC_MAINTAINER_NAME: "Ymatics.AG"
 
 # DAPS URL
 EDC_OAUTH_TOKEN_URL: 'https://daps.test.mobility-dataspace.eu/token'

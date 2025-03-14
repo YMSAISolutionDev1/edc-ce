@@ -1,0 +1,17 @@
+FROM ghcr.io/sovity/edc-dev:10.4.2 AS base
+
+USER root
+
+COPY ./localhost+2.der /tmp/localhost+2.der
+
+COPY ./rootCA.der /tmp/rootCA.der
+
+COPY ./rootCA.pem /tmp/rootCA.pem
+
+COPY ./localhost+2.pem /tmp/localhost+2.pem
+
+RUN keytool -importcert -alias localhost -file /tmp/localhost+2.der -keystore /opt/java/openjdk/lib/security/cacerts -storepass changeit -noprompt
+
+RUN keytool -importcert -alias mkcert-ca -file /tmp/rootCA.der -keystore /opt/java/openjdk/lib/security/cacerts -storepass changeit -noprompt
+
+USER 1001
