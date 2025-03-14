@@ -47,3 +47,7 @@ build
 **/*.key
 **/*.p12
 **/*.jks
+
+*.pem
+*.der
+*.crt
