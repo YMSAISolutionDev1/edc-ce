@@ -15,17 +15,11 @@ services:
       NGINX_ACCESS_LOG: off
 
   edc:
-    build:
-      context: .
-      dockerfile: DockerFile.edc
+    image: ${EDC_IMAGE}
     depends_on:
-      postgresql2:
-        condition: service_healthyepends_on:
       postgresql:
         condition: service_healthy
     environment:
-      EDC_HTTP_SINK_TRUSTALLCERTIFICATES: "true"
-      EDC_HTTP_SOURCE_TRUSTALLCERTIFICATES: "true"
       MY_EDC_NETWORK_TYPE: local-demo-docker-compose
       EDC_API_AUTH_KEY: ApiKeyDefaultValue
       MY_EDC_FQDN: "edc"
@@ -64,15 +58,11 @@ services:
       NGINX_ACCESS_LOG: off
 
   edc2:
-    build:
-      context: .
-      dockerfile: DockerFile.edc
+    image: ${EDC_IMAGE}
     depends_on:
       postgresql2:
         condition: service_healthy
     environment:
-      EDC_HTTP_SINK_TRUSTALLCERTIFICATES: "true"
-      EDC_HTTP_SOURCE_TRUSTALLCERTIFICATES: "true"
       MY_EDC_NETWORK_TYPE: local-demo-docker-compose
       EDC_API_AUTH_KEY: ApiKeyDefaultValue
       MY_EDC_FQDN: "edc2"
@@ -85,11 +75,11 @@ services:
       MY_EDC_JDBC_PASSWORD: edc
 
       MY_EDC_TITLE: "EDC Connector 2"
-      MY_EDC_DESCRIPTION: "sovity Community Edition EDC Connector"
-      MY_EDC_CURATOR_URL: "https://example.com"
-      MY_EDC_CURATOR_NAME: "Example GmbH"
-      MY_EDC_MAINTAINER_URL: "https://sovity.de"
-      MY_EDC_MAINTAINER_NAME: "sovity GmbH"
+      MY_EDC_DESCRIPTION: "Ymatics Community Edition EDC Connector"
+      MY_EDC_CURATOR_URL: "https://ymatics.com"
+      MY_EDC_CURATOR_NAME: "Ymatics AG"
+      MY_EDC_MAINTAINER_URL: "https://ymatics.com"
+      MY_EDC_MAINTAINER_NAME: "Ymatics AG"
 
     ports:
       - '22001:11001'

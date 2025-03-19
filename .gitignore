@@ -51,3 +51,4 @@ build
 *.pem
 *.der
 *.crt
+./data/*
